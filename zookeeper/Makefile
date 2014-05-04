@@ -4,8 +4,10 @@ APP=main
 all:$(OBJS)
 	echo $(OBJES)
 %.o:%.c
-	g++ -o  $@ $^ -lzookeeper_mt
+	g++  -g -o  $@ $^ -lzookeeper_mt
 
 %.o:%.cpp
-	g++ -o  $@ $^ -lzookeeper_mt
+	g++ -g -o  $@ $^ -lzookeeper_mt
+clean:
+	rm *.o
 
